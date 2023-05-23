@@ -1,0 +1,37 @@
+<template>
+    <div class="App">
+        <div class="box">
+            <h1> BMI Calculator</h1>
+        <form onsubmit={submitHandler}>
+            <div class="slds-form-element">
+                <label class="slds-form-element__label slds-text-title_bold" for="text-input-height">Hieght(cm)</label>
+                <div class="slds-form-element__control">
+                    <input type="Number" id="text-input-height" placeholder="Enter your height in cm" min="0" required="" 
+                    class="slds-input" name="height" value={height} onchange={inputHandler} />
+
+                </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label slds-text-title_bold" for="text-input-Weight">Weight(kg)</label>
+                    <div class="slds-form-element__control">
+                    <input type="Number" id="text-input-Weight" placeholder="Enter your Weight in kg"  min="0" required="" class="slds-input"  name = "weight"
+                    value= {weight} onchange={inputHandler}/>
+                    </div>
+                    </div>
+                    <div>
+                        <button class="slds-button slds-button_neutral slds-button_stretch">Calculate</button>
+
+                    </div>
+        </form>
+        <div>
+           Your BMI is {BMI}
+        </div>
+        <div class="info-wrapper">
+            <h2> Your BMI Means</h2>
+            <p>Body Mass Index Ratio</p>
+            <h3> Under 18.5</h3>
+            <p> You are Underweight</p>
+        </div>
+        </div>
+    </div>
+</template>
